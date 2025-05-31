@@ -401,7 +401,7 @@ app.get('/', async (req, res) => {
         res.json(response); // the point of this? just use the ws - yeah conn to the ws on nodes page and send that json over ws
     } catch (error) {
         console.error('Error fetching Docker status:', error);
-        res.status(500).json({ error: 'Docker is not running - HydraD will not function properly.' });
+        res.status(500).json({ error: 'Docker is not running - Craze will not function properly.' });
     }
 });
 
