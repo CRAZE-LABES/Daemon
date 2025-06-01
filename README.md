@@ -1,0 +1,2 @@
+# Daemon
+Daemon for crazepanel
