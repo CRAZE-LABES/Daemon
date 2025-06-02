@@ -288,7 +288,7 @@ function initializeWebSocketServer(server) {
                 });
         
                 stream.on('end', () => {
-                    ws.send('\u001b[1m\u001b[33mcontainer@draco~ \u001b[0mServer marked as Offline\r\n');
+                    ws.send('\u001b[1m\u001b[33mcontainer@craze~ \u001b[0mServer marked as Offline\r\n');
                 });
         
                 stream.on('error', (err) => {
@@ -313,11 +313,11 @@ function initializeWebSocketServer(server) {
             };
         
             if (!actionMap[action]) {
-                ws.send(`\r\n\u001b[33m[draco] \x1b[0Invalid action: ${action}\r\n`);
+                ws.send(`\r\n\u001b[33m[craze] \x1b[0Invalid action: ${action}\r\n`);
                 return;
             }
         
-            ws.send(`\r\n\u001b[33m[draco] \x1b[0mWorking on ${action}...\r\n`);
+            ws.send(`\r\n\u001b[33m[craze] \x1b[0mWorking on ${action}...\r\n`);
         
             try {
                 await actionMap[action]();
@@ -384,7 +384,7 @@ app.get('/', async (req, res) => {
         // Prepare the response object with Docker status
         const response = {
             versionFamily: 1,
-            versionRelease: 'draco ' + config.version,
+            versionRelease: 'craze ' + config.version,
             online: true,
             remote: config.remote,
             mysql: {
