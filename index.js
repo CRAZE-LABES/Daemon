@@ -172,7 +172,7 @@ function initializeWebSocketServer(server) {
         function authenticateWebSocket(ws, req, password, callback) {
             if (password === config.key) {
                 log.info('successful authentication on ws');
-                ws.send(`\r\n\u001b[33m[draco] \x1b[0mconnected!\r\n`);
+                ws.send(`\r\n\u001b[33m[craze] \x1b[0mconnected!\r\n`);
                 const urlParts = req.url.split('/');
                 const containerId = urlParts[2];
                 const volumeId = urlParts[3] || 0;
@@ -323,7 +323,7 @@ function initializeWebSocketServer(server) {
                 await actionMap[action]();
             } catch (err) {
                 console.error(`Error performing ${action} action:`, err);
-                ws.send(`\r\n\u001b[33m[HydraD] \x1b[0Action failed: ${err.message}\r\n`);
+                ws.send(`\r\n\u001b[33m[craze] \x1b[0Action failed: ${err.message}\r\n`);
             }
         }
 
